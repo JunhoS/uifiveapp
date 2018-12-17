@@ -1,1 +1,1 @@
-"# uifiveapp" 
+UI5 Template Samples
