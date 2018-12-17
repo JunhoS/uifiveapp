@@ -1,1 +1,1 @@
-UI5 Template Samples!!
+UI5 Template Samples!! 
