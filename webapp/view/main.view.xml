@@ -1,0 +1,7 @@
+<mvc:View 
+	controllerName="uifiveApp.controller.main" 
+	xmlns:mvc="sap.ui.core.mvc" 
+	xmlns="sap.m">
+	<App id="app"/>
+	<Text>UI FIVE APP</Text>
+</mvc:View>

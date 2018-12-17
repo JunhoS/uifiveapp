@@ -1,0 +1,31 @@
+{
+	"sap.ui5": {
+		"rootView": {
+			"viewName": "uifiveApp.view.main",
+			"type": "XML",
+			"async": true,
+			"id" : "app"
+		},
+		"dependencies": {
+			"libs": {
+				"sap.m": {
+					
+				}
+			}
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"viewPath": "uifiveApp.view",
+				"controlId": "app",
+				"async": true,
+				"transition": "slide"
+			},
+			"routes": [
+			],
+			"targets": {
+			}
+		}
+	}
+}
