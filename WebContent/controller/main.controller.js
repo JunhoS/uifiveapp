@@ -2,14 +2,16 @@ sap.ui.define([
 	'jquery.sap.global',
 	'sap/ui/core/mvc/Controller',
 	'sap/m/Popover',
-	'sap/m/Button'
-], function(jQuery, Controller, Popover, Button) {
+	'sap/m/Button',
+	'sap/ui/model/odata/v2/ODataModel'
+], function(jQuery, Controller, Popover, Button, ODataModel) {
 	"use strict";
 
 	return Controller.extend("uifiveApp.controller.main", {
 
 		onInit: function () {
-
+			var oModel = new ODataModel('/here/goes/your/serviceUrl');
+			this.getView().setModel(oModel,'oData');
 		},
 
 		onUserNamePress: function (event) {

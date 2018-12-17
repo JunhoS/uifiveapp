@@ -20,8 +20,10 @@
 		<script>
 			sap.ui.getCore().attachInit(function() {
 				sap.ui.require([
+					"uifiveApp/localService/mockserver",
 					"sap/ui/core/ComponentContainer"
-				], function (ComponentContainer) {
+				], function (mockserver, ComponentContainer) {
+					mockserver.init("/here/goes/your/serviceUrl/");
 					new ComponentContainer({
 							name : "uifiveApp",
 							height : "100%"
