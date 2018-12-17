@@ -3,8 +3,7 @@
 		"rootView": {
 			"viewName": "uifiveApp.view.main",
 			"type": "XML",
-			"async": true,
-			"id" : "app"
+			"async": true
 		},
 		"dependencies": {
 			"libs": {
@@ -13,12 +12,26 @@
 				}
 			}
 		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "uifiveApp.i18n.i18n"
+				}
+			}
+		},
+		"resources": {
+			"css": [
+				{
+					"uri": "css/style.css"
+				}
+			]
+		},
 		"routing": {
 			"config": {
 				"routerClass": "sap.m.routing.Router",
 				"viewType": "XML",
 				"viewPath": "uifiveApp.view",
-				"controlId": "app",
 				"async": true,
 				"transition": "slide"
 			},
