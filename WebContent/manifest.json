@@ -44,9 +44,24 @@
 					"target": ["master", "details"]
 				},
 				{
-					"name": "orderDetails",
-					"pattern": "orders/:orderId:",
+					"name": "orderMasters",
+					"pattern": "master/:masterName:",
 					"target": ["master", "details"]
+				},
+				{
+					"name": "ActionSheet",
+					"pattern": "ActionSheet",
+					"target": ["master", "ActionSheet"]
+				},
+				{
+					"name": "AddBookmarkButton",
+					"pattern": "AddBookmarkButton",
+					"target": ["master", "AddBookmarkButton"]
+				},
+				{
+					"name": "Breadcrumbs",
+					"pattern": "Breadcrumbs",
+					"target": ["master", "Breadcrumbs"]
 				}
 			],
 			"targets": {
@@ -57,6 +72,21 @@
 				},
 				"details": {
 					"viewName": "detailPage",
+					"controlAggregation": "detailPages",
+					"viewLevel": 0
+				},
+				"ActionSheet" : {
+					"viewName": "Action.ActionSheet",
+					"controlAggregation": "detailPages",
+					"viewLevel": 1
+				},
+				"AddBookmarkButton" : {
+					"viewName": "Action.AddBookmarkButton",
+					"controlAggregation": "detailPages",
+					"viewLevel": 1
+				},
+				"Breadcrumbs" : {
+					"viewName": "Action.Breadcrumbs",
 					"controlAggregation": "detailPages",
 					"viewLevel": 1
 				}

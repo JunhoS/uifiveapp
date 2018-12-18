@@ -1,0 +1,7 @@
+<mvc:View
+	controllerName="uifiveApp.controller.main"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+	height="100%">
+	<Page title="Breadcrumbs"></Page>
+</mvc:View>

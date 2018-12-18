@@ -1,37 +1,14 @@
 <mvc:View
-	controllerName="uifiveApp.controller.main"
+	controllerName="uifiveApp.controller.sidemenu"
 	xmlns:mvc="sap.ui.core.mvc"
 	xmlns="sap.m"
 	xmlns:tnt="sap.tnt"
 	height="100%">
 	<tnt:SideNavigation id="sideNavigation" selectedItem="subItemThree" class="sidemenu">
 		<tnt:item>
-			<tnt:NavigationList>
-				<tnt:NavigationListItem
-					text="Item 1"
-					icon="sap-icon://employee">
-					<tnt:NavigationListItem text="Sub Item 1" />
-					<tnt:NavigationListItem text="Sub Item 2" />
-					<tnt:NavigationListItem text="Sub Item 3" id="subItemThree"/>
-					<tnt:NavigationListItem text="Sub Item 4" />
-				</tnt:NavigationListItem>
-				<tnt:NavigationListItem
-					text="Item 2"
-					icon="sap-icon://building">
-					<tnt:NavigationListItem text="Sub Item 1" />
-					<tnt:NavigationListItem text="Sub Item 2" />
-					<tnt:NavigationListItem text="Sub Item 3" />
-					<tnt:NavigationListItem text="Sub Item 4" />
-				</tnt:NavigationListItem>
-				<tnt:NavigationListItem text="Item 3" />
+			<tnt:NavigationList id="sideNavigationList">
+				
 			</tnt:NavigationList>
 		</tnt:item>
-		<!-- <tnt:fixedItem>
-			<tnt:NavigationList>
-				<tnt:NavigationListItem text="Item 1" icon="sap-icon://employee"/>
-				<tnt:NavigationListItem text="Item 2" icon="sap-icon://building"/>
-				<tnt:NavigationListItem text="Item 3" icon="sap-icon://card"/>
-			</tnt:NavigationList>
-		</tnt:fixedItem> -->
 	</tnt:SideNavigation>
 </mvc:View>
