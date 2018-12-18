@@ -23,9 +23,6 @@ sap.ui.define([
 				oSplitApp.setMode("HideMode");
 			}
 		},
-		onHideContent : function(oEvent){
-			var obj = oEvent.getSource();
-		}
 	});
 
 });

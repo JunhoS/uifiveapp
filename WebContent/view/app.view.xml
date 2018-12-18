@@ -63,5 +63,5 @@
 			</layoutData>
 		</Button>
 	</tnt:ToolHeader>
-	<SplitApp id="mainApp" masterButton="onHideContent"/>
+	<SplitApp id="mainApp"/>
 </mvc:View>
