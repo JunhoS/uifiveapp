@@ -11,7 +11,6 @@ sap.ui.define([
 
 		onInit: function () {
 			__oRouter = this.getOwnerComponent().getRouter();
-			//oRouter.getRoute("master").attachMatched(this._onRouteMatched, this);
 			this._menu =[
 				'Action',
 				'Container',
@@ -62,13 +61,6 @@ sap.ui.define([
             oRouter.navTo("orderMasters", {
             	masterName: oEvent.getSource().getText()
             });
-		},
-		_onRouteMatched : function(oEvent){
-			var oArgs, oView;
-			oArgs = oEvent.getParameter("arguments");
-			oView = this.getView();
-			
-			
 		}
 		
 	});
