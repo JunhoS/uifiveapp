@@ -1,11 +1,11 @@
 <mvc:View
-	controllerName="uifiveApp.controller.main"
+	controllerName="uifiveApp.controller.app"
 	xmlns:mvc="sap.ui.core.mvc"
 	xmlns="sap.m"
 	xmlns:tnt="sap.tnt"
 	height="100%">
 	<tnt:ToolHeader>
-		<Button icon="sap-icon://menu2" type="Transparent">
+		<Button icon="sap-icon://menu2" type="Transparent" press="onMenuOpen">
 			<layoutData>
 				<OverflowToolbarLayoutData priority="NeverOverflow" />
 			</layoutData>
@@ -63,5 +63,5 @@
 			</layoutData>
 		</Button>
 	</tnt:ToolHeader>
-	<SplitApp id="mainApp"/>
+	<SplitApp id="mainApp" masterButton="onHideContent"/>
 </mvc:View>
