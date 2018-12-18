@@ -29,6 +29,16 @@
 				<Property Name="PRICE" Type="Edm.Int32" Nullable="true"/>
 				<Property Name="DATE" Type="Edm.Int32" Nullable="false" />
 			</EntityType>
+			
+			<EntityType Name="SideMenu">
+				<Key>
+					<PropertyRef Name="CODE" />
+				</Key>
+				<Property Name="Name" Type="Edm.String" Nullable="false" />
+				<Property Name="CODE" Type="Edm.String" Nullable="false"/>
+				<Property Name="PRICE" Type="Edm.Int32" Nullable="true"/>
+				<Property Name="DATE" Type="Edm.Int32" Nullable="false" />
+			</EntityType>
 
 			<EntityContainer Name="DemoEntities" 
 							edmanno:LazyLoadingEnabled="true" 
@@ -36,6 +46,7 @@
 							m:IsDefaultEntityContainer="true">
 				<EntitySet Name="Nodes" EntityType="DemoModel.Node" />
 				<EntitySet Name="Products" EntityType="DemoModel.Product" />
+				<EntitySet Name="SideMenues" EntityType="DemoModel.SideMenu" />
 			</EntityContainer>
 
 		</Schema>
