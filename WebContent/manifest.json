@@ -1,7 +1,7 @@
 {
 	"sap.ui5": {
 		"rootView": {
-			"viewName": "uifiveApp.view.main",
+			"viewName": "uifiveApp.view.app",
 			"type": "XML",
 			"async": true
 		},
@@ -32,12 +32,34 @@
 				"routerClass": "sap.m.routing.Router",
 				"viewType": "XML",
 				"viewPath": "uifiveApp.view",
+				"controlId": "mainApp",
+				"controlAggregation": "pages",
 				"async": true,
 				"transition": "slide"
 			},
 			"routes": [
+				{
+					"name": "master",
+					"pattern": "",
+					"target": ["master", "details"]
+				},
+				{
+					"name": "orderDetails",
+					"pattern": "orders/:orderId:",
+					"target": ["master", "details"]
+				}
 			],
 			"targets": {
+				"master": {
+					"viewName": "sidemenu",
+					"controlAggregation": "masterPages",
+					"viewLevel": 0
+				},
+				"details": {
+					"viewName": "detailPage",
+					"controlAggregation": "detailPages",
+					"viewLevel": 1
+				}
 			}
 		}
 	}

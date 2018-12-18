@@ -1,2 +1,4 @@
 html, body { height:100%; overflow:hidden }
 .height100 { height:100%; }
+.width100 { width:100%; }
+.sapMHBox .sapMFlexItem { width:auto; }

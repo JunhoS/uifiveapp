@@ -1,0 +1,15 @@
+<mvc:View
+	controllerName="uifiveApp.controller.main"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+	height="100%">
+	<Page title="detail">
+		<content>
+			<Button text="Run" type="Transparent">
+				<layoutData>
+					<OverflowToolbarLayoutData priority="Low" />
+				</layoutData>
+			</Button>
+		</content>
+	</Page>
+</mvc:View>

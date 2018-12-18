@@ -4,93 +4,45 @@
 	xmlns="sap.m"
 	xmlns:tnt="sap.tnt"
 	height="100%">
-	<tnt:ToolHeader>
-		<Button icon="sap-icon://menu2" type="Transparent">
-			<layoutData>
-				<OverflowToolbarLayoutData priority="NeverOverflow" />
-			</layoutData>
-		</Button>
-		<ToolbarSpacer width="20px" />
-		<Button text="file" type="Transparent">
-			<layoutData>
-				<OverflowToolbarLayoutData priority="Low" />
-			</layoutData>
-		</Button>
-		<Button text="Edit" type="Transparent">
-			<layoutData>
-				<OverflowToolbarLayoutData priority="Low" />
-			</layoutData>
-		</Button>
-		<Button text="View" type="Transparent">
-			<layoutData>
-				<OverflowToolbarLayoutData priority="Low" />
-			</layoutData>
-		</Button>
-		<Button text="Navigate" type="Transparent">
-			<layoutData>
-				<OverflowToolbarLayoutData priority="Low" />
-			</layoutData>
-		</Button>
-		<Button text="Code" type="Transparent">
-			<layoutData>
-				<OverflowToolbarLayoutData priority="Low" />
-			</layoutData>
-		</Button>
-		<Button text="Refactor" type="Transparent">
-			<layoutData>
-				<OverflowToolbarLayoutData priority="Low" />
-			</layoutData>
-		</Button>
-		<Button text="Run" type="Transparent">
-			<layoutData>
-				<OverflowToolbarLayoutData priority="Low" />
-			</layoutData>
-		</Button>
-		<Button text="Tools" type="Transparent">
-			<layoutData>
-				<OverflowToolbarLayoutData priority="Low" />
-			</layoutData>
-		</Button>
-		<tnt:ToolHeaderUtilitySeparator />
-		<ToolbarSpacer>
-			<layoutData>
-				<OverflowToolbarLayoutData priority="NeverOverflow" minWidth="20px" />
-			</layoutData>
-		</ToolbarSpacer>
-		<Button text="Alan Smith" type="Transparent" press="onUserNamePress">
-			<layoutData>
-				<OverflowToolbarLayoutData priority="NeverOverflow" />
-			</layoutData>
-		</Button>
-	</tnt:ToolHeader>
-	<tnt:SideNavigation id="sideNavigation" selectedItem="subItemThree" class="height100">
-		<tnt:item>
-			<tnt:NavigationList>
-				<tnt:NavigationListItem
-					text="Item 1"
-					icon="sap-icon://employee">
-					<tnt:NavigationListItem text="Sub Item 1" />
-					<tnt:NavigationListItem text="Sub Item 2" />
-					<tnt:NavigationListItem text="Sub Item 3" id="subItemThree"/>
-					<tnt:NavigationListItem text="Sub Item 4" />
-				</tnt:NavigationListItem>
-				<tnt:NavigationListItem
-					text="Item 2"
-					icon="sap-icon://building">
-					<tnt:NavigationListItem text="Sub Item 1" />
-					<tnt:NavigationListItem text="Sub Item 2" />
-					<tnt:NavigationListItem text="Sub Item 3" />
-					<tnt:NavigationListItem text="Sub Item 4" />
-				</tnt:NavigationListItem>
-				<tnt:NavigationListItem text="Item 3" />
-			</tnt:NavigationList>
-		</tnt:item>
-		<!-- <tnt:fixedItem>
-			<tnt:NavigationList>
-				<tnt:NavigationListItem text="Item 1" icon="sap-icon://employee"/>
-				<tnt:NavigationListItem text="Item 2" icon="sap-icon://building"/>
-				<tnt:NavigationListItem text="Item 3" icon="sap-icon://card"/>
-			</tnt:NavigationList>
-		</tnt:fixedItem> -->
-	</tnt:SideNavigation>
+	<HBox height="100%">
+		<tnt:SideNavigation id="sideNavigation" selectedItem="subItemThree" class="height100">
+			<tnt:item>
+				<tnt:NavigationList>
+					<tnt:NavigationListItem
+						text="Item 1"
+						icon="sap-icon://employee">
+						<tnt:NavigationListItem text="Sub Item 1" />
+						<tnt:NavigationListItem text="Sub Item 2" />
+						<tnt:NavigationListItem text="Sub Item 3" id="subItemThree"/>
+						<tnt:NavigationListItem text="Sub Item 4" />
+					</tnt:NavigationListItem>
+					<tnt:NavigationListItem
+						text="Item 2"
+						icon="sap-icon://building">
+						<tnt:NavigationListItem text="Sub Item 1" />
+						<tnt:NavigationListItem text="Sub Item 2" />
+						<tnt:NavigationListItem text="Sub Item 3" />
+						<tnt:NavigationListItem text="Sub Item 4" />
+					</tnt:NavigationListItem>
+					<tnt:NavigationListItem text="Item 3" />
+				</tnt:NavigationList>
+			</tnt:item>
+			<!-- <tnt:fixedItem>
+				<tnt:NavigationList>
+					<tnt:NavigationListItem text="Item 1" icon="sap-icon://employee"/>
+					<tnt:NavigationListItem text="Item 2" icon="sap-icon://building"/>
+					<tnt:NavigationListItem text="Item 3" icon="sap-icon://card"/>
+				</tnt:NavigationList>
+			</tnt:fixedItem> -->
+		</tnt:SideNavigation>
+		<Page title="detail">
+			<content>
+				<Button text="Run" type="Transparent">
+					<layoutData>
+						<OverflowToolbarLayoutData priority="Low" />
+					</layoutData>
+				</Button>
+			</content>
+		</Page>
+	</HBox>
 </mvc:View>
