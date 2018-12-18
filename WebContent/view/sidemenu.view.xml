@@ -4,7 +4,7 @@
 	xmlns="sap.m"
 	xmlns:tnt="sap.tnt"
 	height="100%">
-	<tnt:SideNavigation id="sideNavigation" selectedItem="subItemThree" class="height100">
+	<tnt:SideNavigation id="sideNavigation" selectedItem="subItemThree" class="sidemenu">
 		<tnt:item>
 			<tnt:NavigationList>
 				<tnt:NavigationListItem
