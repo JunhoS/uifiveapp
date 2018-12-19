@@ -63,7 +63,7 @@
 												<m:IconTabHeader id="iconTabHeader" selectedKey="invalidKey"
 													select="onSelectTab">
 													<m:items>
-														<m:IconTabFilter text="view.xml" key="V"></m:IconTabFilter>
+														<m:IconTabFilter text="view.xml" key="V" ></m:IconTabFilter>
 														<m:IconTabFilter text="controller.js" key="C"></m:IconTabFilter>
 														<m:IconTabFilter text="fragment.xml" key="FV"></m:IconTabFilter>
 													</m:items>
