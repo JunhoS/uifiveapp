@@ -9,3 +9,52 @@ html, body { height:100%; overflow:hidden }
 .sapMSplitContainerMasterBtn {
 	display : none;
 }
+
+
+
+
+.tilelist .tile{
+    border: 1px solid #427CAC;
+    margin: 2px;
+    display: inline-block;;
+    width : 352px;
+}
+
+.tilelist .tile:hover{
+	outline: 2px solid #427CAC;
+}
+
+.tilelist .tile .type,
+.tilelist .tile .category,
+.tilelist .tile .description
+{
+	padding: 2px 15px;
+    background-color: #f9f9f9;
+}
+
+.tilelist .tile h2{
+    padding: 16px 15px;
+    background-color: #f9f9f9;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: bold;
+}
+.tilelist .tile .img{
+	padding: 20px 15px;
+    background-color: #fff;
+}
+.tilelist .tile .description{
+	height: 100px;
+    overflow: hidden;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    color: #333;
+}
+.tilelist .tile .category{
+	padding-top: 0px;
+    color: #333;
+}
+.tilelist .tile .type{
+	padding-bottom: 15px;
+    color: #333;
+}
