@@ -1,0 +1,12 @@
+<mvc:View
+	controllerName="uifiveApp.controller.home"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+	xmlns:custom="uifiveApp.customControl"
+	height="100%">
+	<Page title="home">
+		<content>
+			
+		</content>
+	</Page>
+</mvc:View>

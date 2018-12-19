@@ -6,10 +6,11 @@ sap.ui.define([
 	'sap/ui/model/odata/v2/ODataModel'
 ], function(jQuery, Controller, Popover, Button, ODataModel) {
 	"use strict";
-	var __oRouter;
+	var __oRouter, __this;
 	return Controller.extend("uifiveApp.controller.app", {
 
 		onInit: function () {
+			__this = this;
 			__oRouter = this.getOwnerComponent().getRouter();
 			this._menu =[
 				'Action',
@@ -32,7 +33,7 @@ sap.ui.define([
 			this._makeMenu();
 		},
 
-		onMenuOpen: function (event) {
+		onMenuOpen: function () {
 			var oSplitApp = this.getView().byId("mainApp"),
 				sAppMode = oSplitApp.getMode();
 			
@@ -45,6 +46,14 @@ sap.ui.define([
 		_makeMenu : function(){
 			var oHeaderToolBar = this.getView().byId('mainheader'),
 				aMenuTitle = this._menu;
+			
+			oHeaderToolBar.addContent(
+					new Button({
+						text : "Home",
+						type : "Transparent",
+						press : this._onPressHomeMenu
+					})
+			);
 			for(var i = 0,len = aMenuTitle.length;i<len;i++){
 				oHeaderToolBar.addContent(
 						new Button({
@@ -56,8 +65,18 @@ sap.ui.define([
 			}
 			
 		},
+		_onPressHomeMenu : function(oEvent){
+			var oRouter = __oRouter;
+			
+			__this.getView().byId("mainApp").setMode("HideMode");
+			
+            oRouter.navTo("home");
+		},
 		_onPressHeaderMenu : function(oEvent){
 			var oRouter = __oRouter;
+			
+			__this.getView().byId("mainApp").setMode("ShowHideMode");
+			
             oRouter.navTo("orderMasters", {
             	masterName: oEvent.getSource().getText()
             });

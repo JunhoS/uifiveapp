@@ -5,12 +5,12 @@
 	xmlns:tnt="sap.tnt"
 	height="100%">
 	<tnt:ToolHeader id="mainheader">
-		<Button icon="sap-icon://menu2" type="Transparent" press="onMenuOpen">
+		<!-- <Button icon="sap-icon://menu2" type="Transparent" press="onMenuOpen">
 			<layoutData>
 				<OverflowToolbarLayoutData priority="NeverOverflow" />
 			</layoutData>
-		</Button>
+		</Button> -->
 		<ToolbarSpacer width="20px" />
 	</tnt:ToolHeader>
-	<SplitApp id="mainApp"/>
+	<SplitApp id="mainApp" mode="HideMode"/>
 </mvc:View>

@@ -70,9 +70,9 @@
 			},
 			"routes": [
 				{
-					"name": "master",
+					"name": "home",
 					"pattern": "",
-					"target": ["master", "details"]
+					"target": ["home"]
 				},
 				{
 					"name": "orderMasters",
@@ -96,6 +96,12 @@
 				}
 			],
 			"targets": {
+			
+				"home": {
+					"viewName": "home",
+					"controlAggregation": "detailPages",
+					"viewLevel": 0
+				},
 				"master": {
 					"viewName": "sidemenu",
 					"controlAggregation": "masterPages",
@@ -104,22 +110,22 @@
 				"details": {
 					"viewName": "detailPage",
 					"controlAggregation": "detailPages",
-					"viewLevel": 0
+					"viewLevel": 1
 				},
 				"ActionSheet" : {
 					"viewName": "Action.ActionSheet",
 					"controlAggregation": "detailPages",
-					"viewLevel": 1
+					"viewLevel": 2
 				},
 				"AddBookmarkButton" : {
 					"viewName": "Action.AddBookmarkButton",
 					"controlAggregation": "detailPages",
-					"viewLevel": 1
+					"viewLevel": 2
 				},
 				"Breadcrumbs" : {
 					"viewName": "Action.Breadcrumbs",
 					"controlAggregation": "detailPages",
-					"viewLevel": 1
+					"viewLevel": 2
 				}
 			}
 		}

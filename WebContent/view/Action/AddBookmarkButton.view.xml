@@ -1,5 +1,5 @@
 <mvc:View
-	controllerName="uifiveApp.controller.main"
+	controllerName="uifiveApp.controller.detailPage"
 	xmlns:mvc="sap.ui.core.mvc"
 	xmlns="sap.m"
 	height="100%">
