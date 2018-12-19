@@ -7,7 +7,6 @@
 		xmlns:l="sap.ui.layout"
 		xmlns:form="sap.ui.layout.form"
 		xmlns:u="sap.ui.unified"
-		xmlns:custom="uifiveApp.customControl"
 		xmlns:c="sap.ui.core">
 	
 	<m:Page showHeader="false">
@@ -85,12 +84,7 @@
 						<subSections>
 							<ObjectPageSubSection>
 								<blocks>
-									<!-- <custom:PictureTile
-										title="ActionSheet"
-										imgSrc="./img/ActionSheet.PNG"
-										contentText="The action sheet holds a list of options from which the user can select to complete an action."
-										className="sap.m.ActionSheet"
-										availableSince="1.10"/> -->
+									
 								</blocks>
 							</ObjectPageSubSection>
 						</subSections>

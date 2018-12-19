@@ -32,12 +32,15 @@
 			
 			<EntityType Name="SideMenu">
 				<Key>
-					<PropertyRef Name="CODE" />
+					<PropertyRef Name="seq" />
 				</Key>
-				<Property Name="Name" Type="Edm.String" Nullable="false" />
-				<Property Name="CODE" Type="Edm.String" Nullable="false"/>
-				<Property Name="PRICE" Type="Edm.Int32" Nullable="true"/>
-				<Property Name="DATE" Type="Edm.Int32" Nullable="false" />
+				<Property Name="seq" Type="Edm.Int32" Nullable="false" />
+				<Property Name="group" Type="Edm.String" Nullable="false" />
+				<Property Name="title" Type="Edm.String" Nullable="false" />
+				<Property Name="imgSrc" Type="Edm.String" Nullable="false" />
+				<Property Name="contentText" Type="Edm.String" Nullable="false" />
+				<Property Name="className" Type="Edm.String" Nullable="false" />
+				<Property Name="availableSince" Type="Edm.String" Nullable="false" />
 			</EntityType>
 
 			<EntityContainer Name="DemoEntities" 

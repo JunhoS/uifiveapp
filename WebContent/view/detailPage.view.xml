@@ -1,15 +1,18 @@
 <mvc:View
-	controllerName="uifiveApp.controller.main"
+	controllerName="uifiveApp.controller.detailPage"
 	xmlns:mvc="sap.ui.core.mvc"
 	xmlns="sap.m"
+	xmlns:custom="uifiveApp.customControl"
 	height="100%">
 	<Page title="detail">
 		<content>
-			<Button text="Run" type="Transparent">
-				<layoutData>
-					<OverflowToolbarLayoutData priority="Low" />
-				</layoutData>
-			</Button>
+			<custom:PictureTile
+				binding="{oData>/SideMenues(0)}"
+				title="{oData>title}"
+				imgSrc="{oData>imgSrc}"
+				contentText="{oData>contentText}"
+				className="{oData>className}"
+				availableSince="{oData>availableSince}"/>
 		</content>
 	</Page>
 </mvc:View>

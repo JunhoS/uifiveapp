@@ -6,11 +6,11 @@ sap.ui.define([
 	var oPictureTile = Control.extend("uifiveApp.customControl.PictureTile",{
 		metadata: {
 			properties: {
-				title: {type: "string"},
-				imgSrc: {type: "string"},
-				contentText: {type: "string"},
-				className: {type: "string"},
-				availableSince: {type: "string"}
+				title: {type: "string", defaultValue : ""},
+				imgSrc: {type: "string", defaultValue : ""},
+				contentText: {type: "string", defaultValue : ""},
+				className: {type: "string", defaultValue : ""},
+				availableSince: {type: "string", defaultValue : ""}
 			}
 		},
 		renderer : {
