@@ -1,7 +1,98 @@
-<mvc:View
-	controllerName="uifiveApp.controller.main"
-	xmlns:mvc="sap.ui.core.mvc"
-	xmlns="sap.m"
-	height="100%">
-	<Page title="Action Sheet"></Page>
+<mvc:View controllerName="uifiveApp.controller.Action.ActionSheet"
+ xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true" xmlns:table="sap.ui.table"
+		xmlns="sap.uxap" xmlns:code="sap.ui.codeeditor"
+		xmlns:m="sap.m"
+		xmlns:f="sap.f"
+		xmlns:l="sap.ui.layout"
+		xmlns:form="sap.ui.layout.form"
+		xmlns:u="sap.ui.unified"
+		xmlns:c="sap.ui.core">
+	
+	<m:Page showHeader="false">
+		<m:content>
+			<ObjectPageLayout id="ObjectPageLayout"
+							 showTitleInHeaderContent="false"
+							alwaysShowContentHeader="true"
+							preserveHeaderStateOnScroll="false"
+							headerContentPinnable="false"
+							isChildPage="true"
+							upperCaseAnchorBar="false">
+						<headerTitle>
+							<ObjectPageHeader  objectTitle="sap.m.ActionSheet"/>
+						</headerTitle>
+		<!-- 
+						<headerContent>
+						</headerContent> -->
+				<sections>
+					<ObjectPageSection title="intro" titleUppercase="false">
+						<subSections>
+							<ObjectPageSubSection>
+								<blocks>
+									<l:VerticalLayout>
+										<m:ObjectStatus title="UX Guidelines" text="Action Sheet"/>
+										<m:ObjectStatus title="Extends" text="Control"/>
+										<m:ObjectStatus title="Description" text="사용자가 작업을 완료하기 위해 선택할 수 있는 옵션 목록 "/>
+									</l:VerticalLayout>
+								</blocks>
+							</ObjectPageSubSection>
+						</subSections>
+					</ObjectPageSection>
+
+					<ObjectPageSection title="basic" titleUppercase="false">
+						<subSections>
+							<ObjectPageSubSection>
+								<blocks>
+									<m:Panel expandable="true" expanded="true">
+										<m:headerToolbar>
+											<m:Toolbar height="3rem" style="Clear">
+												<m:Title text="basic" />
+												<m:ToolbarSpacer />
+											</m:Toolbar>
+										</m:headerToolbar>
+										<m:content>
+											<m:VBox alignItems="Center" justifyContent="Center" fitContainer="true">
+												<l:VerticalLayout class="sapUiContentPadding" width="100%">
+													<l:content>
+														<m:Button text="Open Action Sheet" press="handleOpen"
+															class="sapUiSmallMarginBottom" />
+													</l:content>
+												</l:VerticalLayout>
+											</m:VBox>
+											
+												<m:IconTabHeader id="iconTabHeader" selectedKey="invalidKey"
+													select="onSelectTab">
+													<m:items>
+														<m:IconTabFilter text="view.xml" key="V"></m:IconTabFilter>
+														<m:IconTabFilter text="controller.js" key="C"></m:IconTabFilter>
+														<m:IconTabFilter text="fragment.xml" key="FV"></m:IconTabFilter>
+													</m:items>
+												</m:IconTabHeader>
+					
+												<code:CodeEditor id="aCodeEditor" height="300px"
+													type="javascript" />
+										</m:content>
+									</m:Panel>
+								</blocks>
+							</ObjectPageSubSection>
+						</subSections>
+					</ObjectPageSection>
+					
+
+					
+					<ObjectPageSection title="other" titleUppercase="false">
+						<subSections>
+							<ObjectPageSubSection>
+								<blocks>
+								
+						            
+								</blocks>
+							</ObjectPageSubSection>
+						</subSections>
+					</ObjectPageSection>
+					
+				</sections>
+			</ObjectPageLayout>
+		</m:content>
+	</m:Page>
 </mvc:View>
