@@ -11,6 +11,9 @@ sap.ui.define([
 				contentText: {type: "string", defaultValue : ""},
 				className: {type: "string", defaultValue : ""},
 				availableSince: {type: "string", defaultValue : ""}
+			},
+			events : {
+				"select" : { }
 			}
 		},
 		renderer : {

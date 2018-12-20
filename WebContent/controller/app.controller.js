@@ -12,7 +12,7 @@ sap.ui.define([
 		onInit: function () {
 			__this = this;
 			__oRouter = this.getOwnerComponent().getRouter();
-			this._menu =[
+			/*this._menu =[
 				'Action',
 				'Container',
 				'Data Binding',
@@ -29,8 +29,8 @@ sap.ui.define([
 				'User Input',
 				'Tutorial',
 				'Utility',
-			];
-			this._makeMenu();
+			];*/
+			//this._makeMenu();
 		},
 
 		onMenuOpen: function () {
@@ -51,7 +51,7 @@ sap.ui.define([
 					new Button({
 						text : "Home",
 						type : "Transparent",
-						press : this._onPressHomeMenu
+						press : this.onPressHomeMenu
 					})
 			);
 			for(var i = 0,len = aMenuTitle.length;i<len;i++){
@@ -65,20 +65,20 @@ sap.ui.define([
 			}
 			
 		},
-		_onPressHomeMenu : function(oEvent){
+		onPressHomeMenu : function(oEvent){
 			var oRouter = __oRouter;
 			
 			__this.getView().byId("mainApp").setMode("HideMode");
 			
             oRouter.navTo("home");
 		},
-		_onPressHeaderMenu : function(oEvent){
+		onPressHeaderMenu : function(oEvent){
 			var oRouter = __oRouter;
 			
 			__this.getView().byId("mainApp").setMode("ShowHideMode");
 			
-            oRouter.navTo("orderMasters", {
-            	masterName: oEvent.getSource().getText()
+            oRouter.navTo("headerMenu", {
+            	headerMenu : oEvent.getSource().getText()
             });
 		}
 		

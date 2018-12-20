@@ -4,7 +4,7 @@ sap.ui.define([
 ], function(Controller, ODataModel) {
 	"use strict";
 
-	return Controller.extend("uifiveApp.controller.detailPage", {
+	return Controller.extend("uifiveApp.controller.home", {
 
 		onInit: function () {
 			

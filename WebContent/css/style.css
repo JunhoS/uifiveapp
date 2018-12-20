@@ -14,11 +14,14 @@ html, body { height:100%; overflow:hidden }
 .tilelist {
 	margin:10px;
 }
-
+.blocklayout{
+	display: inline-block;
+	margin-bottom: 50px;
+}
 .tilelist .tile{
     border: 1px solid #427CAC;
     margin: 2px;
-    display: inline-block;;
+    display: inline-block;
     width : 352px;
 }
 

@@ -75,8 +75,13 @@
 					"target": ["home"]
 				},
 				{
-					"name": "orderMasters",
-					"pattern": "master/:masterName:",
+					"name": "headerMenu",
+					"pattern": "headerMenu/:headerMenu:",
+					"target": ["master", "home"]
+				},
+				{
+					"name": "sideMenu",
+					"pattern": "sideMenu/:sideMenu:",
 					"target": ["master", "details"]
 				},
 				{

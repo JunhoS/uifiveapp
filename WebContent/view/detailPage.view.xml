@@ -4,15 +4,15 @@
 	xmlns="sap.m"
 	xmlns:custom="uifiveApp.customControl"
 	height="100%">
-	<Page title="detail">
+	<Page id="detailTilePage" title="detail">
 		<content>
-			<custom:PictureTile
+			<!-- <custom:PictureTile
 				binding="{oData>/SideMenues(0)}"
 				title="{oData>title}"
 				imgSrc="{oData>imgSrc}"
 				contentText="{oData>contentText}"
 				className="{oData>className}"
-				availableSince="{oData>availableSince}"/>
+				availableSince="{oData>availableSince}"/> -->
 		</content>
 	</Page>
 </mvc:View>

@@ -10,8 +10,8 @@ sap.ui.define([
 
 		onInit: function () {
 			__oRouter = this.getOwnerComponent().getRouter();
-			__oRouter.getRoute("orderMasters").attachMatched(this._onRouteMatched, this);
-			var aAction = [
+			__oRouter.getRoute("headerMenu").attachMatched(this._onRouteMatched, this);
+			/*var aAction = [
 				'Action Sheet',
 				'Add Bookmark Button',
 				'Breadcrumbs',
@@ -84,9 +84,32 @@ sap.ui.define([
 				Action : aAction,
 				Container : aContainer
 			};
-			
-			
 			this._makeNavigationListItem(this._sideMenu.Action);
+			*/
+			var aMenu = [
+				'Action',
+				'Container',
+				'Data Binding',
+				'Data Visualization',
+				'Display',
+				'Layout',
+				'List',
+				'Map',
+				'Popup',
+				'Routing',
+				'Testing',
+				'Theming',
+				'Tile',
+				'User Input',
+				'Tutorial',
+				'Utility',
+			];
+			this._sideMenu = {
+					Sample : aMenu
+			};
+			
+			
+			//this._makeNavigationListItem(this._sideMenu.Sample);
 		},
 
 		_makeNavigationListItem: function (aSideMenuList) {
@@ -107,14 +130,16 @@ sap.ui.define([
 		_onPressSideMenu : function(oEvent){
 			var oRouter = __oRouter;
 			var targetText = oEvent.getSource().getText().replace(/(\s*)/g, "");
-            oRouter.navTo(targetText);
+            oRouter.navTo("sideMenu", {
+            	sideMenu : oEvent.getSource().getText()
+            });
 		},
 		_onRouteMatched : function(oEvent){
 			var oArgs, oView;
 			oArgs = oEvent.getParameter("arguments");
 			oView = this.getView();
 			
-			var aSideMenuList = this._sideMenu[oArgs.masterName.replace(/(\s*)/g, "")];
+			var aSideMenuList = this._sideMenu[oArgs.headerMenu.replace(/(\s*)/g, "")];
 			
 			this._makeNavigationListItem(aSideMenuList);
 		}
