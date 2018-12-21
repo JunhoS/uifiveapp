@@ -35,7 +35,7 @@ sap.ui.define([
 		},
 		_makeTileList : function(oReturn){
 			var oTilePage = __oView.byId('detailTilePage');
-			
+			oTilePage.removeAllContent();
 			oReturn.results.forEach(function(item,idx){
 				oTilePage.addContent(new PictureTile({
 					title : item.title,
