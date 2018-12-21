@@ -13,7 +13,7 @@ sap.ui.define([
 				availableSince: {type: "string", defaultValue : ""}
 			},
 			events : {
-				"select" : { }
+				select : { }
 			}
 		},
 		renderer : {
@@ -46,6 +46,17 @@ sap.ui.define([
 		}
 	});
 	
+	oPictureTile.prototype.onBeforeRendering = function(){
+		var domNode = this.getDomRef();
+		$(domNode).unbind('click')
+	}
+
+	oPictureTile.prototype.onAfterRendering = function(){
+		var self = this, domNode = this.getDomRef();
+		$(domNode).bind('click', function() {
+			self.fireSelect();
+		});
+	}
 	
 	return oPictureTile;
 });
