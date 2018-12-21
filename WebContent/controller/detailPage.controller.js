@@ -6,11 +6,10 @@ sap.ui.define([
 	"uifiveApp/customControl/PictureTile"
 ], function(Controller, ODataModel, Filter, FilterOperator, PictureTile) {
 	"use strict";
-	var __oRouter,__oView;
+	var __oRouter;
 	return Controller.extend("uifiveApp.controller.detailPage", {
 
 		onInit: function () {
-			__oView = this.getView(),
 			__oRouter = this.getOwnerComponent().getRouter();
 			__oRouter.getRoute("sideMenu").attachMatched(this._onRouteMatched, this);
 		},
@@ -30,11 +29,11 @@ sap.ui.define([
 			
 			this.getView().getModel('oData').read("/SideMenues",{
 				filters : [oFilter],
-				success : this._makeTileList
+				success : this._makeTileList.bind(this)
 			});
 		},
 		_makeTileList : function(oReturn){
-			var oTilePage = __oView.byId('detailTilePage');
+			var oTilePage = this.getView().byId('detailTilePage');
 			oTilePage.removeAllContent();
 			oReturn.results.forEach(function(item,idx){
 				oTilePage.addContent(new PictureTile({

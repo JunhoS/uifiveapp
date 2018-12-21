@@ -72,7 +72,7 @@
 				{
 					"name": "home",
 					"pattern": "",
-					"target": ["home"]
+					"target": ["master","home"]
 				},
 				{
 					"name": "headerMenu",

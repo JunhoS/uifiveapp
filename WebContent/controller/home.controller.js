@@ -7,11 +7,10 @@ sap.ui.define([
 	return Controller.extend("uifiveApp.controller.home", {
 
 		onInit: function () {
-			
+		
 		},
-
-		onUserNamePress: function (event) {
-
+		onAfterRendering : function(){
+			
 		}
 	});
 

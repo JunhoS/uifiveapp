@@ -9,7 +9,7 @@ sap.ui.define([
 	return Controller.extend("uifiveApp.controller.Action.ActionSheet", {
 
 		onInit: function () {
-			console.log("okok");
+			
 		},
 		onNavBack: function (oEvent) {
 			var oHistory, sPreviousHash;
