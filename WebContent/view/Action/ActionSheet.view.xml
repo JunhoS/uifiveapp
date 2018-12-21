@@ -9,7 +9,7 @@
 		xmlns:u="sap.ui.unified"
 		xmlns:c="sap.ui.core">
 	
-	<m:Page showHeader="false">
+	<m:Page title="ActionSheet" showNavButton="true" navButtonPress="onNavBack">
 		<m:content>
 			<ObjectPageLayout id="ObjectPageLayout"
 							 showTitleInHeaderContent="false"

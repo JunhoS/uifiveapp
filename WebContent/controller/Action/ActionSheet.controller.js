@@ -1,8 +1,9 @@
 sap.ui.define([
 	'sap/ui/core/Fragment',
 	'sap/ui/core/mvc/Controller',
-	'sap/m/MessageToast'
-], function(Fragment, Controller, MessageToast) {
+	'sap/m/MessageToast',
+	"sap/ui/core/routing/History"
+], function(Fragment, Controller, MessageToast, History) {
 	"use strict";
 	
 	return Controller.extend("uifiveApp.controller.Action.ActionSheet", {
@@ -10,7 +11,18 @@ sap.ui.define([
 		onInit: function () {
 			console.log("okok");
 		},
-		
+		onNavBack: function (oEvent) {
+			var oHistory, sPreviousHash;
+
+			oHistory = History.getInstance();
+			sPreviousHash = oHistory.getPreviousHash();
+
+			if (sPreviousHash !== undefined) {
+				window.history.go(-1);
+			} else {
+				this.getRouter().navTo("headerMenu", {headerMenu : "Sample"});
+			}
+		},
 		handleOpen : function (oEvent) {
 			var oButton = oEvent.getSource();
 
